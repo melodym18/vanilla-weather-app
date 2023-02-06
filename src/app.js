@@ -12,13 +12,12 @@ function dateFormat(timestamp) {
 
     let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     let day = days[date.getDay()];
-    
+
     return `${day} ${hours}:${minutes}`;
 }
 
 
 function displayTemperature(response) {
-    console.log(response.data);
     let temperatureElement = document.querySelector("#temperature");
     let cityElement = document.querySelector("#city");
     let conditionElement = document.querySelector("#weather-condition");
