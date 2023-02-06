@@ -10,13 +10,14 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/styles.css" />
     <title>Weather App</title>
   </head>
   <body>
     <div class="container">
       <div class="weather">
-        <h1>New York</h1>
+        <h1 id="city"></h1>
         <div class="date-time">
           <span id="week-day">Sunday</span>
           <span id="month">Feb <span id="day">5</span></span>
@@ -25,7 +26,7 @@
         <div class="row">
           <div class="col">
             <strong>
-              <span id="temperature">7</span>
+              <span id="temperature"></span>
             </strong>
             <span class="conversion"
               ><a href="#" id="celsius">°C</a>
@@ -34,7 +35,7 @@
             >
           </div>
           <div class="col-5">
-            <div id="weather-condition">Sunny</div>
+            <div id="weather-condition"></div>
             <img
               src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
               alt="sunny"
@@ -42,8 +43,7 @@
           </div>
           <div class="col">
             <ul class="current-weather">
-              <li>Precipitation: <span id="precipitation">5%</span></li>
-              <li>Humidity: <span id="humidity">33%</span></li>
+              <li>Humidity: <span id="humidity">33</span>%</li>
               <li>
                 Wind: <span id="wind-speed">9</span>
                 km/h
