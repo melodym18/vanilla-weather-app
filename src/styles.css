@@ -16,7 +16,7 @@ ul {
   font-weight: 600;
 }
 
-img {
+img#icon {
   width: 110px;
 }
 
@@ -63,7 +63,7 @@ a:hover {
 #Open-source-link:hover {
   text-decoration: none;
   cursor: pointer;
-  color: rgb(131, 122, 199);
+  color: #837ac7;
 }
 
 .row {
@@ -101,4 +101,23 @@ a:hover {
 .date-time {
   margin-top: 0;
   margin-bottom: 47px;
+}
+
+.weather-forecast {
+  margin-top: 25px;
+  text-align: center;
+  font-family: monospace;
+  font-weight: 600;
+}
+
+.weather-forecast-date {
+  font-size: 15px;
+}
+
+.weather-forecast-temperature {
+  font-size: 13px;
+}
+
+.weather-forecast-temp-low {
+  opacity: 0.5;
 }
