@@ -4,18 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/styles.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="src/styles.css" />
     <title>Weather App</title>
   </head>
   <body>
     <div class="container">
-      <div class="weather-app">
+      <div class="weather">
         <h1>New York</h1>
         <div class="date-time">
           <span id="week-day">Sunday</span>
@@ -27,19 +27,23 @@
             <strong>
               <span id="temperature">7</span>
             </strong>
-            <span id="celsius">°C</span>|<span id="faregnheit">°F</span>
+            <span class="conversion"
+              ><a href="#" id="celsius">°C</a>
+              <span id="divider">|</span>
+              <a href="#" id="farenheit">°F</a></span
+            >
           </div>
           <div class="col-5">
+            <div id="weather-condition">Sunny</div>
             <img
               src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
               alt="sunny"
             />
-            <div id="weather-condition">sunny</div>
           </div>
           <div class="col">
             <ul class="current-weather">
-              <li>Precipitation:<span id="precipitation">5%</span></li>
-              <li>Humidity:<span id="humidity">33%</span></li>
+              <li>Precipitation: <span id="precipitation">5%</span></li>
+              <li>Humidity: <span id="humidity">33%</span></li>
               <li>
                 Wind: <span id="wind-speed">9</span>
                 km/h
@@ -51,12 +55,13 @@
           <a
             href="https://github.com/melodym18/vanilla-weather-app.git"
             target="_blank"
+            id="Open-source-link"
             >Open-source Code</a
           >
           by Melody Morel
         </small>
       </div>
-      <script src="src/app.js"></script>
     </div>
+    <script src="src/app.js"></script>
   </body>
 </html>

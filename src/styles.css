@@ -1,0 +1,80 @@
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+h1 {
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 35px;
+  text-align: right;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+img {
+  width: 110px;
+}
+
+.row {
+  margin-bottom: 30px;
+}
+.conversion {
+  font-size: 13px;
+  position: relative;
+  top: -35px;
+  left: 5px;
+}
+
+.weather {
+  text-align: center;
+  max-width: 800px;
+  margin: 150px auto;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 33px 93px rgb(82 70 125 / 57%);
+  background-color: rgba(217, 206, 232, 0.342);
+  border: 5px solid #d6d4ed;
+}
+
+#Open-source-link {
+  color: #000;
+}
+
+#Open-source-link:hover {
+  cursor: pointer;
+  color: rgb(131, 122, 199);
+}
+
+#weather-condition {
+  font-size: 16px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
+}
+
+#temperature {
+  font-size: 80px;
+}
+
+#celsius,
+#farenheit {
+  color: #000;
+}
+#celsius:hover,
+#farenheit:hover {
+  cursor: pointer;
+  color: rgb(131, 122, 199);
+}
+
+#divider {
+  font-weight: lighter;
+}
+
+.date-time {
+  margin-top: 0;
+  margin-bottom: 47px;
+}
