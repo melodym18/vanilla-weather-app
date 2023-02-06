@@ -20,6 +20,17 @@ img {
   width: 110px;
 }
 
+#search-button {
+  background-color: rgb(82 70 125);
+  border: none;
+}
+
+#search-button:hover {
+  cursor: pointer;
+  background-color: #d6d4ed;
+  color: #000;
+}
+
 .row {
   margin-bottom: 30px;
 }
