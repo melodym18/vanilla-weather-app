@@ -90,12 +90,6 @@ a:hover {
 
 .conversion .active {
   color: #000;
-  cursor: default;
-}
-
-.conversion .active:hover {
-  text-decoration: none;
-  cursor: default;
 }
 
 .date-time {

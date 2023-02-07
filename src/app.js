@@ -54,8 +54,7 @@ function displayForecast(response) {
 
 function getForecast(coords) {
     let apiKey = "dc0776ed2bt8a0f5b553b1843b00ao7f";
-    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coords.longitude}&lat=${coords.latitude}&key=${apiKey}&units=metric`;
-    console.log(apiUrl);
+    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coords.longitude}&lat=${coords.latitude}&key=${apiKey}&units=imperial`;
     axios.get(apiUrl).then(displayForecast);
 }
 
@@ -84,7 +83,7 @@ function displayTemperature(response) {
 
 function search(city) {
     let apiKey = "dc0776ed2bt8a0f5b553b1843b00ao7f";
-    let units = "metric";
+    let units = "imperial";
     let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${units}`;    
     axios.get(apiUrl).then(displayTemperature);
 }
@@ -95,34 +94,7 @@ function handleSubmit(event) {
     search(cityInputElement.value);
 }
 
-function showFahrenheitConversion(event) {
-    event.preventDefault();
-    let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
-
-    celsiusLink.classList.remove("active");
-    fahrenheitLink.classList.add("active");
-    let temperatureElement = document.querySelector("#temperature");
-    temperatureElement.innerHTML = Math.round(fahrenheitTemp);
-}
-
-function showCelsiusConversion(event) {
-    event.preventDefault();
-    celsiusLink.classList.add("active");
-    fahrenheitLink.classList.remove("active");
-
-    let temperatureElement = document.querySelector("#temperature");
-    temperatureElement.innerHTML = Math.round(celsiusTemp);
-}
-
-let celsiusTemp = null;
-
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
-
-let fahrenheitLink = document.querySelector("#fahrenheit");
-fahrenheitLink.addEventListener("click", showFahrenheitConversion);
-
-let celsiusLink = document.querySelector("#celsius");
-celsiusLink.addEventListener("click", showCelsiusConversion);
 
 search("New York");
